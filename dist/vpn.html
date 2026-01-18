@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="lt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Kodėl VPN svarbus saugumo sistemoms - Atviro Kodo Sprendimai
+        </title>
+        <meta
+            name="description"
+            content="VPN apsauga jūsų savitalpinomiems sprendimams: OnlyOffice, Nextcloud ir kitų sistemų saugumas."
+        />
+        <meta
+            name="keywords"
+            content="VPN, saugumas, OnlyOffice, Nextcloud, savitalpinimas, IT saugumas, WireGuard, OpenVPN"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: #f5f5f5;
+            }
+
+            header {
+                background: #fff;
+                padding: 2rem 1rem;
+                text-align: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            header img {
+                max-width: 200px;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                color: #2c3e50;
+                margin-bottom: 0.5rem;
+            }
+
+            .tagline {
+                color: #7f8c8d;
+                font-size: 1.1rem;
+            }
+
+            nav {
+                background: #2c3e50;
+                padding: 1rem;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                transition: background 0.3s;
+            }
+
+            nav a:hover {
+                background: #34495e;
+            }
+
+            nav a.active {
+                background: #3498db;
+            }
+
+            main {
+                max-width: 900px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+
+            section {
+                background: #fff;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                color: #2c3e50;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 0.5rem;
+            }
+
+            .intro {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .benefits {
+                display: grid;
+                gap: 1.5rem;
+            }
+
+            .benefit {
+                padding: 1rem;
+                border-left: 4px solid #3498db;
+                background: #f8f9fa;
+            }
+
+            .benefit h3 {
+                color: #2c3e50;
+                margin-bottom: 0.5rem;
+            }
+
+            .warning {
+                background: #fff3cd;
+                border-left: 4px solid #ffc107;
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .warning h3 {
+                color: #856404;
+                margin-bottom: 0.5rem;
+            }
+
+            .warning p {
+                color: #856404;
+            }
+
+            .use-cases {
+                display: grid;
+                gap: 1rem;
+            }
+
+            .use-case {
+                padding: 1rem;
+                background: #f8f9fa;
+                border-radius: 4px;
+                border-left: 4px solid #27ae60;
+            }
+
+            .use-case h3 {
+                color: #27ae60;
+                margin-bottom: 0.5rem;
+            }
+
+            .solutions {
+                display: grid;
+                gap: 1rem;
+                /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+            }
+
+            .solution {
+                padding: 1.5rem;
+                background: #f8f9fa;
+                border-radius: 4px;
+                text-align: center;
+            }
+
+            .solution h3 {
+                color: #3498db;
+                margin-bottom: 0.5rem;
+            }
+
+            .cta {
+                background: linear-gradient(135deg, #3498db, #2980b9);
+                color: #fff;
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .cta h2 {
+                color: #fff;
+                border: none;
+            }
+
+            .cta p {
+                font-size: 1.1rem;
+                margin-top: 1rem;
+            }
+
+            footer {
+                text-align: center;
+                padding: 2rem;
+                color: #7f8c8d;
+                font-size: 0.9rem;
+            }
+
+            @media (max-width: 600px) {
+                nav ul {
+                    gap: 0.5rem;
+                }
+
+                nav a {
+                    padding: 0.5rem;
+                    font-size: 0.9rem;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                section {
+                    padding: 1.5rem;
+                }
+
+                .solutions {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="aks.png" alt="Atviro Kodo Sprendimai Logo" />
+            <h1>Atviro Kodo Sprendimai</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Pradžia</a></li>
+                <li><a href="vpn.html" class="active">Kodėl VPN?</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="intro">
+                <h2>Kodėl VPN svarbus savitalpinomiems sprendimams?</h2>
+                <p>
+                    VPN (Virtual Private Network) – tai saugi, šifruota jungtis
+                    tarp jūsų įrenginių ir jūsų serverių. Kai naudojate
+                    savitalpinamus sprendimus kaip OnlyOffice, Nextcloud, el.
+                    pašto serverius ar kitas verslo sistemas, VPN tampa
+                    kritiškai svarbiu saugumo sluoksniu.
+                </p>
+                <p style="margin-top: 1rem">
+                    Be VPN, jūsų sistemos yra tiesiogiai prieinamos iš
+                    interneto, kas sukuria papildomą saugumo riziką. Su VPN,
+                    prieiga galima tik autorizuotiems darbuotojams per saugų
+                    šifruotą kanalą.
+                </p>
+            </section>
+
+            <div class="warning">
+                <h3>⚠️ Saugumo rizika be VPN</h3>
+                <p>
+                    Savitalpinami sprendimai (OnlyOffice, Nextcloud) tiesiogiai
+                    prieinami iš interneto tampa taikiniais:
+                </p>
+                <ul style="margin-top: 0.5rem; margin-left: 2rem">
+                    <li>Automatinių bot'ų slaptažodžių atakoms</li>
+                    <li>Pažeidžiamumų išnaudojimui</li>
+                    <li>DDoS atakoms</li>
+                    <li>Neteisėtai prieigai prie jautrių duomenų</li>
+                </ul>
+            </div>
+
+            <section class="benefits">
+                <h2>VPN privalumai verslo sistemoms</h2>
+
+                <div class="benefit">
+                    <h3>🔒 Papildomas saugumo sluoksnis</h3>
+                    <p>
+                        Netgi jei programa turi pažeidžiamumą, užpuolikas negali
+                        jo išnaudoti – jis negali pasiekti sistemos be VPN
+                        prieigos. Tai vadinasi "zero trust" principas: sistemos
+                        iš viso neprieinamos iš interneto.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🌐 Saugi nuotolinė prieiga</h3>
+                    <p>
+                        Jūsų darbuotojai gali saugiai prisijungti prie
+                        OnlyOffice, Nextcloud ar kitų sistemų iš namų, kavinių
+                        ar kelionės. Visa komunikacija pilnai šifruojama.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🛡️ Apsauga nuo brute-force atakų</h3>
+                    <p>
+                        Be VPN, automatiniai bot'ai nuolat bando atspėti
+                        slaptažodžius prie jūsų sistemų. Su VPN, sistemos net
+                        nematoma internete – nėra ko atakuoti.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>📊 Prieigos kontrolė ir auditas</h3>
+                    <p>
+                        VPN leidžia tiksliai kontroliuoti, kas ir kada
+                        prisijungia prie sistemų. Galite matyti visas jungtis,
+                        blokuoti įtartinus vartotojus ir laikytis atitikties
+                        reikalavimų (BDAR).
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🚀 Geresnis našumas tarp skyrių</h3>
+                    <p>
+                        VPN jungia kelias ofiso vietas į vieną saugų tinklą.
+                        Filialai gali saugiai dalytis duomenimis tarsi būtų
+                        viename pastate.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>💰 Mažesnės saugumo išlaidos</h3>
+                    <p>
+                        Užuot pirkę brangias saugumo sistemas kiekvienai
+                        programai atskirai, VPN apsaugo visas sistemas vienu
+                        metu. Paprastas, efektyvus sprendimas.
+                    </p>
+                </div>
+            </section>
+
+            <section class="use-cases">
+                <h2>Praktiniai VPN panaudojimo atvejai</h2>
+
+                <div class="use-case">
+                    <h3>📄 OnlyOffice dokumentų serveris</h3>
+                    <p>
+                        Jūsų darbuotojai turi prieigą prie bendrai redaguojamų
+                        dokumentų per VPN. Sistemos niekas nemato iš interneto,
+                        tik jūsų komanda gali prisijungti. Net jei OnlyOffice
+                        turėtų pažeidžiamumą, užpuolikas negali jo pasiekti.
+                    </p>
+                </div>
+
+                <div class="use-case">
+                    <h3>☁️ Nextcloud failų dalijimosi sistema</h3>
+                    <p>
+                        Nextcloud su visais jūsų verslo dokumentais prieinama
+                        tik per VPN. Darbuotojai gali saugiai sinchronizuoti
+                        failus iš bet kur, bet sistema neprieinama kenkėjams iš
+                        interneto.
+                    </p>
+                </div>
+
+                <div class="use-case">
+                    <h3>📧 El. pašto serveriai (Zimbra, iRedMail)</h3>
+                    <p>
+                        Administracinė prieiga prie el. pašto serverio apsaugota
+                        VPN. Tik IT specialistai gali patekti į valdymo panelę,
+                        sumažinant riziką.
+                    </p>
+                </div>
+
+                <div class="use-case">
+                    <h3>💬 Vidinis bendravimas (Mattermost, Rocket.Chat)</h3>
+                    <p>
+                        Vidinės komunikacijos sistemos lieka viduje – prieinama
+                        tik darbuotojams per VPN. Konfidencialūs pokalbiai
+                        išlieka privatūs.
+                    </p>
+                </div>
+
+                <div class="use-case">
+                    <h3>🗄️ Duomenų bazės ir CRM sistemos</h3>
+                    <p>
+                        Jautri informacija – klientų duomenys, verslo analizė,
+                        finansiniai įrašai – prieinama tik per VPN. Nėra
+                        tiesioginės prieigos iš interneto.
+                    </p>
+                </div>
+            </section>
+
+            <section class="solutions">
+                <h2>Atviro kodo VPN sprendimai</h2>
+
+                <div class="solution">
+                    <h3>WireGuard</h3>
+                    <p>
+                        Šiuolaikiškas, greitas, paprastas. Idealus namų
+                        darbuotojams ir mažoms komandoms. Lengvai įdiegiamas ir
+                        valdomas.
+                    </p>
+                </div>
+
+                <div class="solution">
+                    <h3>OpenVPN</h3>
+                    <p>
+                        Patikrintas laiko, lankstus, plačiai palaikomas. Puikiai
+                        tinka įmonėms su kompleksiniais poreikiais ir senesniais
+                        įrenginiais.
+                    </p>
+                </div>
+
+                <div class="solution">
+                    <h3>IPsec (strongSwan)</h3>
+                    <p>
+                        Standartizuotas protokolas, puikiai tinkantis jungtims
+                        tarp ofisų. Integruojamas su daugeliu įrenginių be
+                        papildomų programų.
+                    </p>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>Nesaugokite sistemų vien slaptažodžiais</h2>
+                <p>
+                    ✓ VPN užtikrina, kad tik jūsų darbuotojai gali pasiekti
+                    sistemas
+                </p>
+                <p>
+                    ✓ Net pažeidžiamumai programose nebėra išnaudojami iš
+                    interneto
+                </p>
+                <p>✓ Konfidencialūs duomenys lieka konfidencialūs</p>
+                <p>✓ Atitikimas BDAR ir kitų reglamentų reikalavimams</p>
+                <p style="margin-top: 1.5rem; font-size: 1.2rem">
+                    Profesionalus VPN įdiegimas ir konfigūravimas – svarbi
+                    investicija į jūsų verslo saugumą.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Atviro Kodo Sprendimai. Visos teisės saugomos.</p>
+        </footer>
+    </body>
+</html>
