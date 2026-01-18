@@ -77,6 +77,36 @@
                 padding-bottom: 0.5rem;
             }
 
+            nav {
+                background: #2c3e50;
+                padding: 1rem;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                transition: background 0.3s;
+            }
+
+            nav a:hover {
+                background: #34495e;
+            }
+
+            nav a.active {
+                background: #3498db;
+            }
+
             .intro {
                 font-size: 1.1rem;
                 line-height: 1.8;
@@ -167,7 +197,12 @@
             <h1>Atviro Kodo Sprendimai</h1>
             <!--<p class="tagline">Profesionalųs IT sprendimai be licencijų mokesčių</p>-->
         </header>
-
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Pradžia</a></li>
+                <li><a href="vpn.html">Kodėl VPN?</a></li>
+            </ul>
+        </nav>
         <main>
             <section class="intro">
                 <h2>Kas yra atviras kodas?</h2>
