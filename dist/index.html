@@ -1,10 +1,363 @@
 <!doctype html>
-<html>
+<html lang="lt">
     <head>
-        <title>Atviro Kodo Sprendimai</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Atviro Kodo Sprendimai - Profesionalios IT Paslaugos be Licencijų
+            Mokesčių
+        </title>
+        <meta
+            name="description"
+            content="Atviro kodo programinė įranga verslui: LibreOffice, Nextcloud, Linux. Mažesnės kainos, didesnė kontrolė, jokių licencijų mokesčių."
+        />
+        <meta
+            name="keywords"
+            content="atviras kodas, open source, LibreOffice, Nextcloud, Linux, Microsoft Office alternatyva, Dropbox alternatyva"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: #f5f5f5;
+            }
+
+            header {
+                background: #fff;
+                padding: 2rem 1rem;
+                text-align: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            header img {
+                max-width: 200px;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                color: #2c3e50;
+                margin-bottom: 0.5rem;
+            }
+
+            .tagline {
+                color: #7f8c8d;
+                font-size: 1.1rem;
+            }
+
+            main {
+                max-width: 900px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+
+            section {
+                background: #fff;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                color: #2c3e50;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 0.5rem;
+            }
+
+            .intro {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .benefits {
+                display: grid;
+                gap: 1.5rem;
+            }
+
+            .benefit {
+                padding: 1rem;
+                border-left: 4px solid #3498db;
+                background: #f8f9fa;
+            }
+
+            .benefit h3 {
+                color: #2c3e50;
+                margin-bottom: 0.5rem;
+            }
+
+            .alternatives {
+                display: grid;
+                gap: 1rem;
+            }
+
+            .alternative {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                padding: 1rem;
+                background: #f8f9fa;
+                border-radius: 4px;
+            }
+
+            .commercial {
+                color: #e74c3c;
+                font-weight: 600;
+            }
+
+            .opensource {
+                color: #27ae60;
+                font-weight: 600;
+            }
+
+            .cta {
+                background: linear-gradient(135deg, #3498db, #2980b9);
+                color: #fff;
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .cta h2 {
+                color: #fff;
+                border: none;
+            }
+
+            .cta p {
+                font-size: 1.1rem;
+                margin-top: 1rem;
+            }
+
+            footer {
+                text-align: center;
+                padding: 2rem;
+                color: #7f8c8d;
+                font-size: 0.9rem;
+            }
+
+            @media (max-width: 600px) {
+                .alternative {
+                    grid-template-columns: 1fr;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                section {
+                    padding: 1.5rem;
+                }
+            }
+        </style>
     </head>
-    <body style="text-align: center">
-        <img src="aks.png" style="width: 200px" />
-        <div>Kuriama...</div>
+    <body>
+        <header>
+            <img src="aks.png" alt="Atviro Kodo Sprendimai Logo" />
+            <h1>Atviro Kodo Sprendimai</h1>
+            <!--<p class="tagline">Profesionalųs IT sprendimai be licencijų mokesčių</p>-->
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Kas yra atviras kodas?</h2>
+                <p>
+                    Atviro kodo (Open Source) programinė įranga – tai programos,
+                    kurių šaltinio kodas yra viešai prieinamas peržiūrai.
+                    Daugelis atviro kodo projektų leidžia laisvai naudoti,
+                    keisti ir platinti programinę įrangą, tačiau licencijos gali
+                    skirtis – kai kurios riboja komercinį naudojimą ar SaaS
+                    teikimą.
+                </p>
+                <p style="margin-top: 1rem">
+                    Pagrindinis skirtumas nuo uždaros komercinės įrangos –
+                    skaidrumas ir galimybė kontroliuoti savo sistemas. Mokate ne
+                    už programinės įrangos licencijas, o už diegimą, pritaikymą
+                    ir palaikymą pagal savo poreikius.
+                </p>
+            </section>
+
+            <section class="benefits">
+                <h2>Kodėl atviro kodo sprendimai kainuoja mažiau?</h2>
+
+                <div class="benefit">
+                    <h3>💰 Jokių licencijų mokesčių</h3>
+                    <p>
+                        Nemokate už programinę įrangą – tik už jos diegimą,
+                        pritaikymą ir palaikymą. Vidutiniškai sutaupote 60-80%
+                        lyginant su komercinėmis alternatyvomis.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🔓 Nėra „vendor lock-in"</h3>
+                    <p>
+                        Nesate pririšti prie vieno tiekėjo. Galite bet kada
+                        pakeisti paslaugų teikėją ar valdyti sistemas
+                        savarankiškai be papildomų sąnaudų.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>📈 Mokėjimas už tai, ko reikia</h3>
+                    <p>
+                        Komercinė įranga dažnai verčia mokėti už funkcijas,
+                        kurių nenaudojate. Atviras kodas leidžia mokėti tik už
+                        realiai reikalingas paslaugas.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🛡️ Didesnis saugumas ir privatumas</h3>
+                    <p>
+                        Atviras kodas reiškia, kad saugumo ekspertai visame
+                        pasaulyje peržiūri kodą. Jūsų duomenys lieka jūsų
+                        kontrolėje, o ne kažkur debesyje.
+                    </p>
+                </div>
+            </section>
+
+            <section class="public-sector">
+                <h2>
+                    Kodėl atviras kodas ypač svarbus valstybiniam sektoriui?
+                </h2>
+
+                <div class="benefit">
+                    <h3>🏛️ Skaidrumas ir atskaitomybė</h3>
+                    <p>
+                        Viešasis sektorius privalo būti skaidrus. Atviras kodas
+                        leidžia piliečiams, auditoriams ir priežiūros
+                        institucijoms peržiūrėti, kaip veikia valstybės
+                        sistemos. Tai stiprina pasitikėjimą ir atskaitomybę.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🇱🇹 Technologinė suverenumas</h3>
+                    <p>
+                        Valstybė neturėtų priklausyti nuo užsienio korporacijų
+                        sprendimų. Atviras kodas užtikrina, kad kritinės
+                        sistemos lieka Lietuvos kontrolėje ir gali būti
+                        palaikomos net jei tiekėjas nutrauktų veiklą.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>💶 Mokesčių mokėtojų pinigų efektyvumas</h3>
+                    <p>
+                        Vietoj mokėjimo už licencijas užsienio korporacijoms,
+                        pinigai lieka Lietuvoje – mokama už paslaugas vietiniams
+                        IT specialistams. Viena licencija gali būti naudojama
+                        visose institucijose be papildomų sąnaudų.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🔒 Duomenų saugumas ir privatumas</h3>
+                    <p>
+                        Valstybiniai duomenys – piliečių informacija,
+                        medicininiai įrašai, mokesčių duomenys – turi likti
+                        šalyje. Atviras kodas leidžia viskam veikti vietiniuose
+                        serveriuose be priklausomybės nuo JAV ar kitų šalių
+                        debesų paslaugų.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🔄 Sistemų tarpusavio suderinamumas</h3>
+                    <p>
+                        Atviri standartai ir protokolai leidžia skirtingų
+                        institucijų sistemoms lengvai bendrauti tarpusavyje.
+                        Nereikia pirkti vieno tiekėjo sprendimų visoms
+                        institucijoms – kiekviena gali rinktis geriausią
+                        sprendimą savo poreikiams.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>👨‍💻 Vietos IT sektoriaus stiprinimas</h3>
+                    <p>
+                        Investicijos į atviro kodo sprendimus kuria darbo vietas
+                        Lietuvoje ir stiprina vietos IT kompetencijas. Užuot
+                        mokėję licencijų mokesčius Microsoft ar Adobe, mokama
+                        lietuviškoms IT įmonėms už diegimą ir palaikymą.
+                    </p>
+                </div>
+            </section>
+
+            <section class="alternatives">
+                <h2>Atviro kodo alternatyvos populiarioms programoms</h2>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Microsoft Office</div>
+                    <div class="opensource">✅ LibreOffice / OnlyOffice</div>
+                </div>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Dropbox / Google Drive</div>
+                    <div class="opensource">✅ Nextcloud</div>
+                </div>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Windows Server</div>
+                    <div class="opensource">
+                        ✅ Linux (Ubuntu, Debian, Rocky)
+                    </div>
+                </div>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Microsoft Exchange</div>
+                    <div class="opensource">✅ Zimbra / iRedMail</div>
+                </div>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Slack</div>
+                    <div class="opensource">✅ Mattermost / Rocket.Chat</div>
+                </div>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Adobe Photoshop</div>
+                    <div class="opensource">✅ GIMP / Krita</div>
+                </div>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Zoom (mokama versija)</div>
+                    <div class="opensource">✅ Jitsi Meet</div>
+                </div>
+
+                <div class="alternative">
+                    <div class="commercial">❌ Trello</div>
+                    <div class="opensource">✅ Taiga / Focalboard</div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>Kodėl verta rinktis atviro kodo sprendimus?</h2>
+                <p>✓ Sutaupote pinigus ilgalaikėje perspektyvoje</p>
+                <p>✓ Turite visišką kontrolę ir nepriklausomybę</p>
+                <p>
+                    ✓ Gaunate patikimą, bendruomenės patikrintą programinę
+                    įrangą
+                </p>
+                <p>✓ Neprisirišate prie vieno tiekėjo</p>
+                <p style="margin-top: 1.5rem; font-size: 1.2rem">
+                    Pasirengę pereiti prie atviro kodo sprendimų?
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Atviro Kodo Sprendimai. Visos teisės saugomos.</p>
+        </footer>
     </body>
 </html>
